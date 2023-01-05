@@ -1,0 +1,30 @@
+{
+    "name": "basic-connect",
+    "version": "1.0.0",
+    "description": "NodeJS IoT SDK v2 Basic Connect Sample",
+    "homepage": "https://github.com/aws/aws-iot-device-sdk-js-v2",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aws/aws-iot-device-sdk-js-v2.git"
+    },
+    "contributors": [
+        "AWS SDK Common Runtime Team <aws-sdk-common-runtime@amazon.com>"
+    ],
+    "license": "Apache-2.0",
+    "main": "./dist/index.js",
+    "scripts": {
+        "tsc": "tsc",
+        "prepare": "npm run tsc",
+        "start": "npm run prepare && node dist/index.js --endpoint a1pisap8ajyqat-ats.iot.ap-southeast-2.amazonaws.com --key ./certs/MyLocalPC_01.private.key --cert ./certs/MyLocalPC_01.cert.pem --ca_file ./certs/root-CA.crt --client_id sdk-nodejs-v2 --topic sdk/test/js --device_name MyLocalPC_01"
+    },
+    "devDependencies": {
+        "@types/node": "^10.17.50",
+        "typescript": "^4.7.4"
+    },
+    "dependencies": {
+        "aws-iot-device-sdk-v2": "^1.9.0",
+        "osx-temperature-sensor": "^1.0.8",
+        "systeminformation": "^5.16.9",
+        "yargs": "^16.2.0"
+    }
+}
